@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinance Limited | Debt Recovery & Credit Management PNG</title>
+    <style>
+        /* CSS RESET & VARIABLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary-color: #4A0E17; /* Deep Maroon from logo */
+            --accent-color: #D4AF37;  /* Elegant Gold from logo */
+            --dark-text: #2C3E50;
+            --light-bg: #F9F9F9;
+            --white: #FFFFFF;
+        }
+
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        /* NAVIGATION */
+        header {
+            background-color: var(--primary-color);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid var(--accent-color);
+        }
+
+        .brand-name {
+            color: var(--white);
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .brand-name span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(74, 14, 23, 0.85), rgba(74, 14, 23, 0.9), rgba(0, 0, 0, 0.4)), url('9651.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .hero h1 span {
+            color: var(--accent-color);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+        }
+
+        /* SECTIONS GENERAL */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            position: relative;
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        /* ABOUT SECTION */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .highlight-box {
+            background-color: var(--light-bg);
+            border-left: 5px solid var(--accent-color);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .about-image-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-logo {
+            max-width: 350px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* SERVICES SECTION */
+        .services-bg {
+            background-color: var(--light-bg);
+            width: 100%;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        /* BUSINESS MODEL SECTION */
+        .model-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+
+        .step {
+            padding: 20px;
+            position: relative;
+        }
+
+        .step-number {
+            font-size: 42px;
+            font-weight: bold;
+            color: var(--accent-color);
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        .step h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        /* CONTACT SECTION */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .contact-method {
+            margin-bottom: 20px;
+        }
+
+        .contact-method strong {
+            display: block;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+        }
+
+        .contact-method a {
+            color: var(--dark-text);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-method a:hover {
+            color: var(--accent-color);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 40px 20px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+            }
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-area">
+                <!-- Using the requested file name for the logo image -->
+                <img src="9651.jpg" alt="Kinance Limited Logo" class="logo-img">
+                <div class="brand-name">Kinance<span> Limited</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#model">Our Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Professional <span>Debt Recovery</span> & Accounts Receivable Solutions</h1>
+            <p>Restoring financial balance and safeguarding corporate cash flows across Papua New Guinea since 2024.</p>
+            <a href="#contact" class="btn">Request a Consultation</a>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Established in 2024, <strong>Kinance Limited</strong> is a premier debt recovery and accounts receivable management firm. The name Kinance beautifully unifies our local identity and mission: blending <strong>Kina</strong> (our national currency) and <strong>Finance</strong> to deliver powerful, localized financial protections.</p>
+                <p>We are a 100% wholly owned Papua New Guinean enterprise. This gives us an unmatched understanding of the local economic landscape, business cultures, and legislative frameworks required to resolve delicate accounts receivable dilemmas successfully.</p>
+                <p>Over our years of operation, we have proudly assisted numerous financially strained companies to securely recover stagnant debts, allowing them to reinvest in their operations, protect their payrolls, and thrive.</p>
+                <div class="highlight-box">
+                    <strong>Our PNG Pride:</strong> As a homegrown business, we treat your business relations with extreme cultural awareness and professional respect, ensuring your corporate reputation remains intact throughout the collection lifecycle.
+                </div>
+            </div>
+            <div class="about-image-wrap">
+                <!-- Large rendering of the company logo asset -->
+                <img src="9651.jpg" alt="Kinance Limited Corporate Logo" class="about-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <div class="services-bg">
+        <section id="services">
+            <h2 class="section-title">Our Capabilities</h2>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <h3>Commercial Debt Recovery</h3>
+                    <p>Specialized business-to-business (B2B) recovery intervention targeting overdue commercial invoices. We quickly resolve defaults to return valuable operating capital to your books.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Loan Debt Management</h3>
+                    <p>Comprehensive tracking, restructuring, and active recovery of personal, structured, or institutional loan portfolios that have fallen out of traditional terms.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Receivables Outsourcing</h3>
+                    <p>Allow our dedicated team to manage your early-stage aging accounts. We act as an extension of your accounts department to keep invoices paid on time, before they turn into debts.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Credit Management Consulting</h3>
+                    <p>We evaluate your existing credit policies, client onboarding risk profiles, and internal terms to insulate your company against future bad debt exposures.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Pre-Legal Dispute Resolution</h3>
+                    <p>Mediation strategies that find realistic solutions for non-payment, reducing the extreme expenses and stress related to court proceedings for both parties.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Skip Tracing & Investigations</h3>
+                    <p>Utilizing local networks and professional tools to locate missing debtors or verify hidden company assets across various provinces.</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- BUSINESS MODEL / PROCESS SECTION -->
+    <section id="model">
+        <h2 class="section-title">Our Ethical Business Model</h2>
+        <p style="text-align: center; max-width: 700px; margin: -20px auto 40px; font-size: 16px;">We operate on an outcome-focused philosophy designed to minimize friction while maximizing cash flow performance.</p>
+        
+        <div class="model-steps">
+            <div class="step">
+                <div class="step-number">01</div>
+                <h3>Placement & Audit</h3>
+                <p>You provide documentation on the default ledger. Our legal and financial analysts vet the asset validity immediately.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">02</div>
+                <h3>Amicable Mediation</h3>
+                <p>We reach out via structured, respectful dialogue, emphasizing compromise to avoid long litigation cycles.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">03</div>
+                <h3>Structured Recovery</h3>
+                <p>Funds are securely recovered through lump-sum settlement clearing or strictly audited payment installments.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">04</div>
+                <h3>Remittance & Reporting</h3>
+                <p>Recovered Kina balances are remitted promptly to your corporate accounts with deep transparent audit breakdowns.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <div class="services-bg">
+        <section id="contact">
+            <h2 class="section-title">Recover What is Yours</h2>
+            <div class="contact-grid">
+                
+                <div class="contact-info">
+                    <h3>Get in touch with Kinance Limited</h3>
+                    <p style="margin-bottom: 25px;">Don't let aging invoices drain your hard-earned corporate liquidity. Reach out to our offices today for an obligation-free portfolio evaluation.</p>
+                    
+                    <div class="contact-method">
+                        <strong>Office Location:</strong>
+                        Kolofa Street,<br>
+                        Gordons, Port Moresby,<br>
+                        Papua New Guinea
+                    </div>
+                    
+                    <div class="contact-method">
+                        <strong>Telephone Support:</strong>
+                        <a href="tel:+6751053225">+675 105 3225</a><br>
+                        <a href="tel:+67582906329">+675 8290 6329</a>
+                    </div>
+
+                    <div class="contact-method">
+                        <strong>Email Enquiries:</strong>
+                        <a href="mailto:kinance@gmail.com">kinance@gmail.com</a>
+                    </div>
+
+                    <div class="contact-method">
+                        <strong>Operating Hours:</strong>
+                        Monday - Friday: 8:00 AM - 4:30 PM (PGT)
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('Thank you for contacting Kinance Limited. Our recovery experts will reach out shortly.');">
+                        <input type="text" placeholder="Your Full Name / Corporate Representative" required>
+                        <input type="text" placeholder="Company Name" required>
+                        <input type="email" placeholder="Corporate Email Address" required>
+                        <input type="tel" placeholder="Contact Phone Number" required>
+                        <textarea rows="5" placeholder="Please provide brief details regarding the outstanding accounts receivable or recovery service required..." required></textarea>
+                        <button type="submit" class="btn" style="width: 100%; cursor: pointer;">Submit Recovery Request</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p><strong>Kinance Limited</strong> — Empowering Corporate Cash Flow Through Reliable Recovery.</p>
+            <p style="margin-top: 5px; opacity: 0.7;">Kolofa Street, Gordons, Port Moresby, Papua New Guinea</p>
+        </div>
+        <p>&copy; 2026 Kinance Limited. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
